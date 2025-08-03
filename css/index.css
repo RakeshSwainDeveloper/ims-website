@@ -1,44 +1,8 @@
 /* index.css */
 
-.homepage-main.container {
-  /* display: flex; */
-  max-width: 1140px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
-  color: #111;
-}
 
-.intro-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
 
-.intro-left {
-  flex: 1 1 350px;
-}
 
-.intro-left h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.inline-logo {
-  width: 80px;
-  height: auto;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 10px;
-}
 
 .highlighted-text {
   color: #a5161a;
@@ -89,11 +53,6 @@
 .about-section {
   padding: 80px 20px;
   background-color: #fff;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
 }
 
 .about-content {
@@ -217,24 +176,272 @@
 }
 
 /* Responsive Fixes */
-/* @media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-  } */
-
-
-@media (max-width: 768px) {
-  .brand-message p {
-    font-size: 1.1rem;
-    gap: 5px;
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .container {
+    max-width: 100%;
+    margin: auto;
+  }
+  .homepage-main.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #111;
+  }
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
   }
 
-  /* .brand-message h3 {
-    font-size: 1.2rem;
-  } */
+  .intro-left {
+    flex: 1 1 350px;
+  }
 
-  .brand-message img {
-    width: 30px;
-    height: 30px;
+  .intro-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    /* display: flex; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .inline-logo {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container {
+    max-width: 100%;
+    margin: auto;
+  }
+  .homepage-main.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #111;
+  }
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .intro-left {
+    flex: 1 1 350px;
+  }
+
+  .intro-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    /* display: flex; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .inline-logo {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    max-width: 100%;
+    margin: auto;
+  }
+  .homepage-main.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #111;
+  }
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .intro-left {
+    flex: 1 1 350px;
+  }
+
+  .intro-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    /* display: flex; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .inline-logo {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .container {
+    max-width: 100%;
+    margin: auto;
+  }
+  .homepage-main.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #111;
+  }
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .intro-left {
+    flex: 1 1 350px;
+  }
+
+  .intro-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    /* display: flex; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .inline-logo {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .container {
+    max-width: 100%;
+    margin: auto;
+  }
+  .homepage-main.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #111;
+  }
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .intro-left {
+    flex: 1 1 350px;
+  }
+
+  .intro-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    /* display: flex; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .inline-logo {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
+  }
+}
+
+/* XXL devices (very large screens, 1400px and up) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 100%;
+    margin: auto;
+  }
+  .homepage-main.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    color: #111;
+  }
+  .intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+
+  .intro-left {
+    flex: 1 1 350px;
+  }
+
+  .intro-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    /* display: flex; */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .inline-logo {
+    width: 80px;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 10px;
   }
 }
