@@ -1,29 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>IMS - Home</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IMS Website</title>
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/footer.css" />
 </head>
+
+
 <body>
 
-  <!-- HEADER -->
-  <div id="header"></div>
+  <!-- Header include -->
+  <div data-include="components/header.html"></div>
 
-  <!-- MAIN CONTENT -->
-  <main>
-    <section class="hero">
-      <h1>Intelligent Marketing Solutions</h1>
-      <p>Create immersive experiences through events & exhibitions.</p>
+  <!-- Main content -->
+  <main class="homepage-main container">
+
+    <section class="intro-section">
+
+      <div class="intro-left">
+        <h1>
+          Intelligent
+          <img src="images/content-logo.png" alt="IMS Logo" class="inline-logo" />
+          <span class="highlighted-text">Marketing</span>
+          Solutions
+        </h1>
+      </div>
+
+      <div class="intro-content">
+        <img src="images/exhibition.jpg" alt="Exhibition" class="rounded-image" />
+        <p>
+          IMS connects, engages, and delivers with innovation, expertise, and unwavering customer commitment.
+        </p>
+        <a href="#" class="cta-button">
+          Explore More
+          <span aria-hidden="true" class="arrow-icon">↗</span>
+        </a>
+      </div>
+
     </section>
-    <!-- Add more sections -->
+
+    <section class="banner-section">
+      <img src="images/waiters.jpg" alt="Event Staff" class="banner-image" />
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-left">
+            <span class="section-label">• About</span>
+            <h2><span class="highlight">About Our</span><br>Company</h2>
+            <p>
+              IMS is a decade-strong company committed to delivering high-impact solutions through innovation,
+              expertise, and a customer-first mindset. We connect, engage, and inspire.
+            </p>
+            <a href="#" class="read-more-btn">Read More</a>
+          </div>
+          <div class="about-right">
+            <div class="stat-block">
+              <strong>215K+</strong>
+              <span>Satisfied Clients</span>
+            </div>
+            <div class="stat-block">
+              <strong>12Y+</strong>
+              <span>Years of Experience</span>
+            </div>
+            <div class="stat-block">
+              <strong>215K+</strong>
+              <span>Projects Completed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="brand-message">
+          <h3>
+            Make <img src="images/icon-brand.png" alt="Icon" />
+            your brand <img src="images/img-about1.jpg" alt="Event" />
+            <span class="highlight-red">unforgettable</span>
+          </h3>
+          <h3>
+            by curating immersive <img src="images/img-about2.jpg" alt="Immersive" />
+            <span class="highlight-red">experiences</span>
+            through our event & exhibition
+            <img src="images/img-exhibition.jpg" alt="Exhibition" />
+          </h3>
+        </div>
+      </div> -->
+        <div class="brand-message">
+          <p>
+            Make <img src="images/icon-brand.png" alt="Icon" />
+            your brand <img src="images/img-about1.jpg" alt="Event" />
+            <span class="highlight-red">unforgettable</span>
+            by curating immersive <img src="images/img-about2.jpg" alt="Immersive" />
+            <span class="highlight-red">experiences</span>
+            through our event & exhibition
+            <img src="images/img-exhibition.jpg" alt="Exhibition" />
+          </p>
+        </div>
+
+    </section>
+
+
+
   </main>
 
-  <!-- FOOTER -->
-  <div id="footer"></div>
+  <!-- Footer include -->
+  <div data-include="components/footer.html"></div>
 
-  <script src="js/main.js"></script>
+  <!-- JS loader -->
+  <script src="js/include.js"></script>
+
 </body>
-</html>
-<h1>Hello World</h1>
 
+</html>
