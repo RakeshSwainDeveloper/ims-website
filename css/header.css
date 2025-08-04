@@ -67,3 +67,18 @@
   background-color: #870f12;
 }
 
+.nav-links li a.active {
+  position: relative;
+  color: #000;
+  font-weight: 600;
+}
+
+.nav-links li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+}
