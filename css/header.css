@@ -35,6 +35,13 @@
   padding: 0;
 }
 
+.nav-links ul,
+.nav-links li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 .nav-links li a {
   text-decoration: none;
   color: #333;
@@ -42,6 +49,7 @@
   padding: 8px 12px;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
 }
 
 .nav-links li a:hover,
@@ -68,9 +76,10 @@
 }
 
 .nav-links li a.active {
+  background-color: transparent;
+  color: inherit;              
+  font-weight: 600;             
   position: relative;
-  color: #000;
-  font-weight: 600;
 }
 
 .nav-links li a.active::after {
@@ -81,4 +90,58 @@
   width: 100%;
   height: 2px;
   background-color: #000;
+}
+
+/* Dropdown and Submenu styling */
+.dropdown-menu,
+.submenu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ddd;
+  z-index: 1000;
+  min-width: 220px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dropdown:hover > .dropdown-menu,
+.has-submenu:hover > .submenu {
+  display: block;
+}
+
+.dropdown-menu li a,
+.submenu li a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+}
+
+.dropdown-menu li a:hover,
+.submenu li a:hover {
+  background-color: #eee;
+}
+
+/* Submenu positioning */
+.has-submenu {
+  position: relative;
+}
+
+.has-submenu .submenu {
+  top: 0;
+  left: 100%;
+}
+
+/* Arrow indication for submenu */
+.has-submenu > a::after {
+  content: "›";
+  margin-left: 6px;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Optional: spacing fix for nested menus */
+.nav-links li {
+  position: relative;
 }

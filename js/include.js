@@ -1,26 +1,3 @@
-// window.addEventListener('DOMContentLoaded', () => {
-//   includeHTML();
-// });
-
-// function includeHTML() {
-//   const includes = document.querySelectorAll('[data-include]');
-//   includes.forEach(el => {
-//     const file = el.getAttribute('data-include');
-//     fetch(file)
-//       .then(res => {
-//         if (res.ok) return res.text();
-//         else throw new Error(`Failed to load ${file}`);
-//       })
-//       .then(html => {
-//         el.innerHTML = html;
-//       })
-//       .catch(err => {
-//         el.innerHTML = `<p style="color:red;">Error loading ${file}</p>`;
-//         console.error(err);
-//       });
-//   });
-// }
-
 window.addEventListener('DOMContentLoaded', () => {
   includeHTML();
 });
@@ -39,9 +16,10 @@ function includeHTML() {
       .then(html => {
         el.innerHTML = html;
 
-        // Run active link logic ONLY when header is loaded
+        // Run nav logic only after header is loaded
         if (file.includes('header.html')) {
-          setActiveNavLink(); // ✅ set active nav link
+          setActiveNavLink();
+          enableDropdownMenus();
         }
       })
       .catch(err => {
@@ -65,3 +43,25 @@ function setActiveNavLink() {
   });
 }
 
+function enableDropdownMenus() {
+  const dropdownItems = document.querySelectorAll('.nav-links .has-submenu');
+
+  dropdownItems.forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.classList.add('open');
+    });
+
+    item.addEventListener('mouseleave', () => {
+      item.classList.remove('open');
+    });
+    const triggerLink = item.querySelector('a');
+    if (triggerLink) {
+      triggerLink.addEventListener('click', e => {
+        if (window.innerWidth < 768) {
+          e.preventDefault();
+          item.classList.toggle('open');
+        }
+      });
+    }
+  });
+}
