@@ -1,0 +1,271 @@
+/* Hero Banner */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Section Heading */
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 20px;
+    margin: 20px 0 5px 0;
+    line-height: 1;
+}
+
+.section-heading .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #a5161a;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.section-heading .label {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+}
+
+hr {
+    margin: 0 20px 10px 20px;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Intro Section */
+.intro-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px 20px 30px 20px;
+    gap: 40px;
+}
+
+.intro-section .left {
+    flex: 1;
+}
+
+.intro-section .right {
+    flex: 2;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Event Management Section */
+.event-management-section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 40px 20px;
+}
+
+.event-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.event-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.event-block .image,
+.event-block .content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.event-block .image img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.event-block .content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+    color: #000;
+}
+
+.event-block .content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* CTA Section */
+.cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: #f5f1f1;
+    border: 1px solid #b64b4b;
+    border-radius: 6px;
+    padding: 40px 20px;
+    color: #7a0f0f;
+    text-align: left;
+}
+
+.cta img {
+    width: 120px;
+    height: auto;
+    border: 2px solid green;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.cta h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin: 0;
+    flex: 1;
+}
+
+.red-text {
+    color: #7a0f0f;
+    font-weight: 700;
+}
+
+.black-text {
+    color: #000;
+    font-weight: 700;
+}
+
+.enquire-btn {
+    background-color: #7a0f0f;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.enquire-btn:hover {
+    background-color: #b64b4b;
+}
+
+.icon-arrow {
+    font-weight: 700;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+    }
+
+    .event-block {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .event-block .image,
+    .event-block .content {
+        width: 100%;
+    }
+
+    .cta {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cta img {
+        margin-bottom: 20px;
+    }
+}
+
+.latest-events {
+    padding: 60px 20px;
+}
+
+.latest-events .left {
+    flex: 1;
+}
+
+.latest-events .right {
+    flex: 1.5;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.latest-events h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.event-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+    position: relative;
+}
+
+.gallery-item.large .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.gallery-item.large .icon-arrow {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
