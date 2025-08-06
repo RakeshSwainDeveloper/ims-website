@@ -73,29 +73,6 @@ hr {
     color: #444;
 }
 
-/* content-container */
-
-.content-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 20px;
-}
-
-.left-content {
-  flex: 1;
-}
-
-.right-content {
-  flex: 1;
-}
-
-.red-text {
-  color: #a30000; 
-}
-
-
 /* Event Management Section */
 .event-management-section {
     display: flex;
