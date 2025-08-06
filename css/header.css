@@ -1,21 +1,27 @@
 /* header.css */
-
 .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  padding: 15px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+}
+
+.logo {
+  margin-right: 0;
 }
 
 .logo img {
@@ -25,6 +31,7 @@
 .nav {
   flex-grow: 1;
   margin-left: 30px;
+  display: flex;
 }
 
 .nav-links {
@@ -69,6 +76,7 @@
   align-items: center;
   gap: 6px;
   transition: background-color 0.3s ease;
+  margin-left: 0;
 }
 
 .btn-cta:hover {
@@ -77,8 +85,8 @@
 
 .nav-links li a.active {
   background-color: transparent;
-  color: inherit;              
-  font-weight: 600;             
+  color: inherit;
+  font-weight: 600;
   position: relative;
 }
 
@@ -101,11 +109,11 @@
   border: 1px solid #ddd;
   z-index: 1000;
   min-width: 220px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.dropdown:hover > .dropdown-menu,
-.has-submenu:hover > .submenu {
+.dropdown:hover>.dropdown-menu,
+.has-submenu:hover>.submenu {
   display: block;
 }
 
@@ -134,7 +142,7 @@
 }
 
 /* Arrow indication for submenu */
-.has-submenu > a::after {
+.has-submenu>a::after {
   content: "›";
   margin-left: 6px;
   font-size: 0.8rem;
