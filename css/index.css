@@ -280,6 +280,7 @@ hr {
   align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 28px;
 }
 
 .solutions-left {
@@ -316,10 +317,12 @@ hr {
   width: 100%;
   border-radius: 12px;
   margin-top: 1rem;
+  margin-right: 20px;
 }
 
 .solutions-right {
   flex: 1 1 48%;
+  padding-left: 20px;
 }
 
 .solutions-description {
