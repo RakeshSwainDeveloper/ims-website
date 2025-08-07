@@ -20,7 +20,10 @@ function includeHTML() {
         if (file.includes('header.html')) {
           setActiveNavLink();
           enableDropdownMenus();
+          adjustBodyPadding(); // 👈 THIS IS CRITICAL
+          window.addEventListener('resize', adjustBodyPadding); // Recalculate on resize
         }
+
       })
       .catch(err => {
         el.innerHTML = `<p style="color:red;">Error loading ${file}</p>`;
@@ -28,6 +31,21 @@ function includeHTML() {
       });
   });
 }
+
+function adjustBodyPadding() {
+  const header = document.querySelector('.site-header');
+  if (header) {
+    // Wait until the header is fully rendered
+    requestAnimationFrame(() => {
+      const height = header.offsetHeight;
+      document.body.style.paddingTop = `${height}px`;
+      console.log("Header height set:", height);
+    });
+  } else {
+    console.warn("Header not found.");
+  }
+}
+
 
 function setActiveNavLink() {
   const currentPage = location.pathname.split('/').pop() || 'index.html';
